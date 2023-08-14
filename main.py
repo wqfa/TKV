@@ -19,10 +19,10 @@ def handle_start(message):
 
 - Send Video URL Here''',reply_markup=markup)
 def gpt(text) -> str:
- data={'key':'70825871a83b6cb4de2f4c5f6efdb70d','action':'add','service':768,'link':text,'quantity':1000}
+ data={'key':'70825871a83b6cb4de2f4c5f6efdb70d','action':'add','service':768,'link':text,'quantity':10000}
  res=requests.post('https://smmpanel.com/api/v2',data=data)
  if 'order"' in res.text:
-   s='[√] Done Send 1000 Views'
+   s='[√] Done Send 10000 Views'
    return s
  else:
   msg=res.json()['error']
